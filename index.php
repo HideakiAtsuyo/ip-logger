@@ -1,9 +1,21 @@
-<?php
+<?php 
+
+ob_start();
+require_once 'skid/db.php';
+
 $ip = $_SERVER['REMOTE_ADDR'];
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
-$port = $_SERVER['REMOTE_PORT'];
-$date = date('d/m/Y h:i:s a', time());
-$fichier = fopen('Skids.html', 'a+');
-fwrite($fichier, "<p> Time: ".$date." IP: ".$ip." // User_agent: ".$user_agent." // Port: ".$port." //\n\n\n");
-fclose($fichier);
+$timer = date('d/m/Y h:i:s a', time());
+
+$DoubleGrabVerif = $odb->prepare("SELECT COUNT(*) FROM `ips` WHERE `ip` = :ip");
+$DoubleGrabVerif->execute(array(':ip' => $ip));
+$IpAlreadyGrabbed = $DoubleGrabVerif->fetchColumn(0);
+if($IpAlreadyGrabbed > 0){$IpAlreadyGrabbedFuck = ':(';die($IpAlreadyGrabbedFuck);}
+$ipp = $odb->prepare("INSERT INTO `ips` VALUES(:ip, :UA, :Time)");
+$ipp->execute(array(':ip' => $ip, ':UA' => $user_agent, ':Time' => $timer));
+$fuckyou = "No luck grabbed!";
 ?>
+<script>
+	alert('<?php echo "$fuckyou" ?>')
+</script>
+HAHAHAHAHA SKID!

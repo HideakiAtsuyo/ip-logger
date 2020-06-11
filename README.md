@@ -20,4 +20,4 @@ try {
 ?>
 ```
 
-Replace : `root`, `anexample` and `iplogger` if you change the db name and save...<br><br>EASY NO!?<br><br><br><br>To Do:<br>- Add a page with all the ip collected in table form<br>- Add Anti-Proxy/VPN(Simple repositories already exist for that so I'm not going to break my brain.)<br>- Add settings file
+Replace : `root`, `anexample` and `iplogger` if you change the db name and save...<br><br>EASY NO!?<br><br><br><br>To Do:<br>- Add Anti-Proxy/VPN(Simple repositories already exist for that so I'm not going to break my brain.)<br>- Add settings file

@@ -25,7 +25,7 @@ require_once 'skid/db.php';
       color: #0eff00;
     }
 </style>
-<table class="table table-striped">
+<table align="center" class="table table-striped">
   <caption color="#0eff00">VICTIMS</caption>
   <thead>
     <tr>

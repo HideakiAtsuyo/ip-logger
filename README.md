@@ -1,9 +1,9 @@
 # ip-logger
 
 <br>
-Used: [Anti-Proxy-VPN](https://github.com/HideakiAtsuyo/Anti-Proxy-VPN/)
+Used: Anti-Proxy-VPN: https://github.com/HideakiAtsuyo/Anti-Proxy-VPN
 <br>
-Thanks to [Cleaner-Discord](https://github.com/Cleaner-Discord/) for the help! Really good guy :)
+Thanks to Cleaner-Discord: https://github.com/Cleaner-Discord for the help! Really good guy :)
 <br>
 
 ## Informations and settings

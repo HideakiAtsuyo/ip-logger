@@ -6,6 +6,10 @@ Used: Anti-Proxy-VPN: https://github.com/HideakiAtsuyo/Anti-Proxy-VPN
 Thanks to Cleaner-Discord: https://github.com/Cleaner-Discord for the help! Really good guy :)
 <br>
 
+## Speed Setup Video:
+
+[Here(YouTube)](https://www.youtube.com/watch?v=6OOnHM3LQ_c)
+
 ## Informations and settings
 
 

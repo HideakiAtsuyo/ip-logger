@@ -32,4 +32,7 @@ try {
 ?>
 ```
 
+You also need to modify [This](https://github.com/HideakiAtsuyo/ip-logger/blob/4dbb72ad33fe5e0dfca82d91e161a22a6f18ae5f/grab.php#L9) you need to put true or false(true only if you're using CloudFlare) the line looks: `$cloudflare = true;`
+
+
 Replace : `root`, `anexample` and `iplogger` if you change the db name and save...<br><br>EASY NO!?<br><br><br><br>To Do:<br>- Add Anti-CF(and remove it if he can't work)<br>- Add settings file<br>

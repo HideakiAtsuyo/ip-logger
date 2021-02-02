@@ -13,26 +13,22 @@ Thanks to Cleaner-Discord: https://github.com/Cleaner-Discord for the help! Real
 ## Informations and settings
 
 
-Basic PHP ip logger for kids who can't ip log.<br>Later this can be updated for add better things because too basics sorry i want to help you skids just wait :/<br><br>Grab IPs in a database and if the ip is already in, die with `:(`<br><br>Used: MariaDB Server, PHPMYADMIN and apache2(work also with nginx, and httpd for #centos lol :))<br>BLABLA = ip or mydomain.extension<br>DBNAME = the name choosend for the db<br><br>Go to: https://BLABLA/phpmyadmin/server_databases.php?server=1 create a database with name "iplogger" you can change this isn't a magic trick ;)<br>After go to: https://BLABLA/phpmyadmin/db_import.php?db=DBNAME "https://i.imgur.com/FeDkGCe.png" (YEAH FRENCH JUST USE THE BUTTONS!?)<br>Now set the settings in `skid/db.php`<br>
+Basic PHP ip logger for kids who can't ip log.<br>Later this can be updated for add better things because too basics sorry i want to help you skids just wait :/<br><br>Grab IPs in a database and if the ip is already in, die with `:(`<br><br>Used: MariaDB Server, PHPMYADMIN and apache2(work also with nginx, and httpd for #centos lol :))<br>BLABLA = ip or mydomain.extension<br>DBNAME = the name choosend for the db<br><br>Go to: https://BLABLA/phpmyadmin/server_databases.php?server=1 create a database with name "iplogger" you can change this isn't a magic trick ;)<br>After go to: https://BLABLA/phpmyadmin/db_import.php?db=DBNAME "https://i.imgur.com/FeDkGCe.png" (YEAH FRENCH JUST USE THE BUTTONS!?)<br>Now set the settings in `config.php`<br>
 ```php
 <?php
-date_default_timezone_set("Europe/Paris");
+return (object) array(
+    'host' => 'localhost',
+    'dbName' => 'db',
+    'user' => 'root',
+    'pass' => 'password',
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'iplogger');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'anexample');
-define('ERROR_MESSAGE', 'Fuck an error you\'re not a skid for nothing. :(');
-
-try {
-	$odb = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USERNAME, DB_PASSWORD);
-} catch( PDOException $Exception ) {
-	die(ERROR_MESSAGE);
-}
+    'cloudflare' => true,
+    'ProtectedIPs' => ["ip1", "ip2"]
+);
 ?>
 ```
 
 You also need to modify [This](https://github.com/HideakiAtsuyo/ip-logger/blob/4dbb72ad33fe5e0dfca82d91e161a22a6f18ae5f/grab.php#L9) you need to put true or false(true only if you're using CloudFlare) the line looks: `$cloudflare = true;`
 
 
-Replace : `root`, `anexample` and `iplogger` if you change the db name and save...<br><br>EASY NO!?<br><br><br><br>To Do:<br>- Add Anti-CF(and remove it if he can't work)<br>- Add settings file<br>
+Replace : `root`, `password` and `db`(db name) if you change the db name and save...<br><br>EASY NO!?<br><br><br><br>To Do:<br>- Add Anti-CF(and remove it if he can't work)<br>- Add settings file<br>

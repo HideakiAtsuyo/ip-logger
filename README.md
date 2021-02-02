@@ -1,7 +1,9 @@
 # ip-logger
 
 <br>
-Used: Anti-Proxy-VPN: https://github.com/HideakiAtsuyo/Anti-Proxy-VPN By [Cleaner-Discord](https://github.com/Cleaner-Discord)
+
+Used: [Anti-Proxy-VPN](https://github.com/HideakiAtsuyo/Anti-Proxy-VPN) By [Cleaner-Discord](https://github.com/Cleaner-Discord)
+
 <br>
 
 ## Speed Setup Video:

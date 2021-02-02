@@ -1,27 +1,25 @@
 <?php 
 
 ob_start();
+$config = include('config.php');
 require_once 'skid/db.php';
 
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 $timer = date('d/m/Y h:i:s a', time());
 
-$cloudflare = true;
-$dontGrab = array("ip1", "ip2", "...");
-
 function protect($oof)
 {
-	foreach ($dontGrab as &$toCheck) {
+	foreach ($config->ProtectedIPs as &$toCheck) {
 		if($oof == $toCheck){
-			die("Protected");
+			die("Protected from this IP Logger");
 		}
 	}
 }
 
-if($cloudflare == true){
+if($config->cloudflare == true){
 	$ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
 	protect($ip);
-} else if($cloudflare == false){
+} else if($config->ProtectedIPs == false){
 	$ip = $_SERVER['REMOTE_ADDR'];
 	protect($ip);
 }

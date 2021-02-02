@@ -28,7 +28,15 @@ return (object) array(
 ?>
 ```
 
-You also need to modify [This](https://github.com/HideakiAtsuyo/ip-logger/blob/4dbb72ad33fe5e0dfca82d91e161a22a6f18ae5f/grab.php#L9) you need to put true or false(true only if you're using CloudFlare) the line looks: `$cloudflare = true;`
+You also need to modify [This](https://github.com/HideakiAtsuyo/ip-logger/blob/75d508f252dcece0451cdfba28cbcf7c4ab9335a/config.php#L8) you need to set it to `true` or `false`(`true` only if you're using CloudFlare)
 
 
-Replace : `root`, `password` and `db`(db name) if you change the db name and save...<br><br>EASY NO!?<br><br><br><br>To Do:<br>- Add Anti-CF(and remove it if he can't work)<br>- Add settings file<br>
+Replace : `root`, `password` and `db`(db name) if you change the db name and save...<br>
+
+<br>
+
+## List of the IPs
+
+BLABLA = VPS IP or DOMAIN.EXTENSION<br>You can go to: `https://BLABLA/list.php` to see the IPs logged
+
+<br>EASY NO!?<br><br><br>To Do:<br>- I don't know give some ideas for the ip-logger or projects ideas

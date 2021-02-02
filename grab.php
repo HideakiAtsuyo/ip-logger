@@ -7,11 +7,23 @@ $user_agent = $_SERVER['HTTP_USER_AGENT'];
 $timer = date('d/m/Y h:i:s a', time());
 
 $cloudflare = true;
+$dontGrab = array("ip1", "ip2", "...");
+
+function protect($oof)
+{
+	foreach ($dontGrab as &$toCheck) {
+		if($oof == $toCheck){
+			die("Protected");
+		}
+	}
+}
 
 if($cloudflare == true){
 	$ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
+	protect($ip);
 } else if($cloudflare == false){
 	$ip = $_SERVER['REMOTE_ADDR'];
+	protect($ip);
 }
 
 $DoubleGrabVerif = $odb->prepare("SELECT COUNT(*) FROM `ips` WHERE `ip` = :ip");

@@ -23,7 +23,7 @@ function protect($oof)
 if($config->cloudflare == true){
 	$ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
 	protect($ip);
-} else if($config->ProtectedIPs == false){
+} else if($config->cloudflare == false){
 	$ip = $_SERVER['REMOTE_ADDR'];
 	protect($ip);
 }

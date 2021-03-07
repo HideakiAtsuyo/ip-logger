@@ -8,7 +8,7 @@ Used: [Anti-Proxy-VPN](https://github.com/HideakiAtsuyo/Anti-Proxy-VPN) By [Clea
 
 ## Speed Setup Video:
 
-[Here(YouTube)](https://www.youtube.com/watch?v=6OOnHM3LQ_c)
+[Here(YouTube)](https://www.youtube.com/watch?v=6OOnHM3LQ_c) (Old but always usable)
 
 ## Informations and settings
 

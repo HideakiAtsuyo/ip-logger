@@ -13,7 +13,7 @@ Used: [Anti-Proxy-VPN](https://github.com/HideakiAtsuyo/Anti-Proxy-VPN) By [Clea
 ## Informations and settings
 
 
-Basic PHP ip logger for kids who can't ip log.<br>Later this can be updated for add better things because too basics sorry i want to help you skids just wait :/<br><br>Grab IPs in a database and if the ip is already in, die with `:(`<br><br>Used: MariaDB Server, PHPMYADMIN and apache2(work also with nginx, and httpd for #centos lol :))<br>BLABLA = ip or mydomain.extension<br>DBNAME = the name choosend for the db<br><br>Go to: https://BLABLA/phpmyadmin/server_databases.php?server=1 create a database with name "iplogger" you can change this isn't a magic trick ;)<br>After go to: https://BLABLA/phpmyadmin/db_import.php?db=DBNAME "https://i.imgur.com/FeDkGCe.png" (YEAH FRENCH JUST USE THE BUTTONS!?)<br>Now set the settings in `config.php`<br>
+Basic PHP ip logger for kids who can't ip log.<br>Later this can be updated for add better things because too basics sorry i want to help you skids just wait :/<br><br>Grab IPs in a database and if the ip is already in, die with `:(`<br><br>You can protect IPs in the config file<br><br>Used: MariaDB Server, PHPMYADMIN and apache2(work also with nginx, and httpd for #centos lol :))<br>BLABLA = ip or mydomain.extension<br>DBNAME = the name choosend for the db<br><br>Go to: https://BLABLA/phpmyadmin/server_databases.php?server=1 create a database with name "iplogger" you can change this isn't a magic trick ;)<br>After go to: https://BLABLA/phpmyadmin/db_import.php?db=DBNAME "https://i.imgur.com/FeDkGCe.png" (YEAH FRENCH JUST USE THE BUTTONS!?)<br>Now set the settings in `config.php`<br>
 ```php
 <?php
 return (object) array(
